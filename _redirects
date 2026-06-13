@@ -1,0 +1,6 @@
+# Redirect www to root
+https://www.koda.fyi/* https://koda.fyi/:splat 301!
+
+# Legacy URL redirects (add more here as needed)
+/download /index.html#download 301
+/about     /index.html 301

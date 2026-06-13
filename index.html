@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Koda is a privacy-first community platform for gaming squads, content creators, and online communities. End-to-end encrypted voice, messaging, and creator tools.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#09090F">
+
+  <!-- Open Graph / Social sharing -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://koda.fyi/">
+  <meta property="og:title"       content="Koda — Chat Like No One's Watching">
+  <meta property="og:description" content="Your squad's conversations stay private. End-to-end encrypted messaging, voice, and creator tools — without the surveillance.">
+  <meta property="og:image"       content="https://koda.fyi/assets/og-image.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Koda — Chat Like No One's Watching">
+  <meta name="twitter:description" content="Privacy-first community platform for gamers and creators.">
+  <meta name="twitter:image"       content="https://koda.fyi/assets/og-image.png">
+
+  <title>Koda — Chat Like No One's Watching</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+  <link rel="alternate icon"            href="/assets/icons/favicon.svg">
+
+  <!-- Preconnect to font CDN for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://koda.fyi/">
+</head>
+<body>
+
+<!-- ════════════════════════════ NAV -->
+<nav class="nav" id="kp-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo" aria-label="Koda home">
+      <div class="nav-mark" aria-hidden="true">K</div>
+      <span class="nav-name">Koda</span>
+    </a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#privacy">Privacy</a></li>
+      <li><a href="#voice">Voice</a></li>
+      <li><a href="#creator">Creator</a></li>
+      <li><a href="#download">Download</a></li>
+    </ul>
+
+    <div class="nav-ctas">
+      <a href="#" class="btn btn-ghost">Sign in</a>
+      <a href="#download" class="btn btn-primary">Download Alpha</a>
+    </div>
+
+    <button
+      class="nav-toggle"
+      id="kp-menu-toggle"
+      aria-controls="kp-mob"
+      aria-expanded="false"
+      aria-label="Open navigation menu">
+      <div class="ham" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="kp-mob" role="dialog" aria-label="Navigation menu">
+  <ul class="mob-links" role="list">
+    <li><a href="#features">Features</a></li>
+    <li><a href="#privacy">Privacy</a></li>
+    <li><a href="#voice">Voice</a></li>
+    <li><a href="#creator">Creator</a></li>
+    <li><a href="#download">Download</a></li>
+  </ul>
+  <div class="mob-ctas">
+    <a href="#" class="btn btn-ghost">Sign in</a>
+    <a href="#download" class="btn btn-primary">Download Alpha</a>
+  </div>
+</div>
+
+<!-- ════════════════════════════ HERO -->
+<section class="hero" aria-label="Hero">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero-inner">
+
+      <div class="alpha-badge" role="status">
+        <span class="alpha-dot" aria-hidden="true"></span>
+        Alpha &middot; v0.34 &middot; Now Available
+      </div>
+
+      <h1>
+        Chat like no one's watching.<br>
+        <span class="grad">Because they're not.</span>
+      </h1>
+
+      <p class="hero-sub">
+        Koda gives your gaming squad, stream community, or creator circle a private space to talk &mdash; without a platform reading every message and deciding what you can say.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="#download" class="btn btn-primary btn-lg">Download Koda Alpha</a>
+        <a href="#features" class="btn btn-ghost btn-lg">See what&rsquo;s inside &rarr;</a>
+      </div>
+
+      <!-- Cipher animation card -->
+      <div class="chat-card" role="img" aria-label="Animated demo showing messages are end-to-end encrypted">
+        <div class="chat-bar">
+          <div class="chat-dot" aria-hidden="true"></div>
+          <span class="chat-dot-label">End-to-end encrypted &middot; Private to your crew</span>
+        </div>
+        <div class="chat-layers" aria-hidden="true">
+          <div class="chat-locked">
+            <div>&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619; &rarr; &#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;</div>
+            <div>&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619; &#9619;&#9619;&#9619;&#9619;&#9619; &#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619; &#9619;&#9619;&#9619;&#9619;</div>
+            <div>&#9619;&#9619;&#9619;&#9619;&#9619;&#9619; &#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619; &#9619;&#9619;&#9619;&#9619;&#9619;&#9619; &#9619;&#9619;&#9619;</div>
+          </div>
+          <div class="chat-open">
+            <div class="msg-name">ShadowWolf <span class="msg-channel">&num; raid-night</span></div>
+            <div style="color:var(--t1)">meet at the boss room in 10, same strat as last time &#x1F43A;</div>
+          </div>
+        </div>
+        <div class="chat-footer">
+          &#x1F512;&nbsp; Only your crew can read this. Not Koda. Not anyone else.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════ TRUST BAR -->
+<div class="trust" role="list" aria-label="Key features at a glance">
+  <div class="trust-inner">
+    <div class="trust-item" role="listitem"><span class="trust-icon" aria-hidden="true">&#x1F512;</span><span class="trust-text">End-to-end encrypted</span></div>
+    <div class="trust-item" role="listitem"><span class="trust-icon" aria-hidden="true">&#x1F399;</span><span class="trust-text">Private voice channels</span></div>
+    <div class="trust-item" role="listitem"><span class="trust-icon" aria-hidden="true">&#x1F4B0;</span><span class="trust-text">Creator monetisation</span></div>
+    <div class="trust-item" role="listitem"><span class="trust-icon" aria-hidden="true">&#x1F6AB;</span><span class="trust-text">No ads &middot; No tracking</span></div>
+    <div class="trust-item" role="listitem"><span class="trust-icon" aria-hidden="true">&#x1F5A5;</span><span class="trust-text">Windows &middot; macOS &middot; Linux</span></div>
+  </div>
+</div>
+
+<!-- ════════════════════════════ FEATURES -->
+<section class="s" id="features" aria-labelledby="features-heading">
+  <div class="wrap">
+    <div class="s-head fade">
+      <div class="pill pill-v">What Koda does</div>
+      <h2 id="features-heading">Built for the way you actually communicate.</h2>
+      <p>Everything you need to run your community &mdash; without handing your conversations to a corporation.</p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat-card hi fade">
+        <div class="feat-icon fi-v" aria-hidden="true">&#x1F510;</div>
+        <h3>Private by default</h3>
+        <p>Every message in every channel is end-to-end encrypted. Your conversations live on your devices &mdash; not in a company database being read, analysed, or sold to advertisers. Private is the default, not a premium setting.</p>
+      </div>
+      <div class="feat-card fade">
+        <div class="feat-icon fi-m" aria-hidden="true">&#x1F3D8;</div>
+        <h3>Servers &amp; channels</h3>
+        <p>Create a server for your guild, your stream community, or your group of friends. Build text channels, voice channels, and subscriber-only areas &mdash; all with proper role and permission controls.</p>
+      </div>
+      <div class="feat-card fade">
+        <div class="feat-icon fi-m" aria-hidden="true">&#x1F399;</div>
+        <h3>Private voice &amp; video</h3>
+        <p>Squad calls, team strats, co-streams, community watch parties &mdash; your voice sessions are private too. What happens in your voice channel stays in your voice channel.</p>
+      </div>
+      <div class="feat-card fade">
+        <div class="feat-icon fi-v" aria-hidden="true">&#x1F4AC;</div>
+        <h3>Encrypted direct messages</h3>
+        <p>One-on-one DMs between you and your contacts are fully private. Safety numbers let you verify you&rsquo;re talking to who you think you are &mdash; important when managing a large community.</p>
+      </div>
+      <div class="feat-card fade">
+        <div class="feat-icon fi-g" aria-hidden="true">&#x1F4B0;</div>
+        <h3>Creator tools</h3>
+        <p>Subscription tiers, digital product sales, subscriber-only channels. Run your community economy directly inside Koda &mdash; keep your audience close and your revenue stream steady.</p>
+      </div>
+      <div class="feat-card fade">
+        <div class="feat-icon fi-r" aria-hidden="true">&#x1F6E1;</div>
+        <h3>Community safety</h3>
+        <p>Robust moderation tools, server audit logs, content ratings, parental controls, and role-based permissions &mdash; because privacy doesn&rsquo;t mean unmoderated. Your server, your rules.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════ PRIVACY -->
+<section class="s priv-s" id="privacy" aria-labelledby="privacy-heading">
+  <div class="wrap">
+    <div class="priv-grid">
+      <div class="priv-text fade">
+        <div class="pill pill-m">Privacy that actually means something</div>
+        <h2 id="privacy-heading">Your messages are yours. Full stop.</h2>
+        <p>Most platforms encrypt messages in transit &mdash; meaning they&rsquo;re encrypted between your device and the company&rsquo;s server, where they get decrypted and stored in plain text. That&rsquo;s not private. That&rsquo;s a filing cabinet with a padlock on the front door.</p>
+        <p>Koda encrypts messages on your device before they leave. Our servers store encrypted data we can&rsquo;t read. We&rsquo;re not going to scan your conversations to serve you ads, report you to advertisers, or make your content decisions for you.</p>
+
+        <ul class="checks" role="list">
+          <li><span class="chk" aria-hidden="true">&#x2713;</span><span>Messages encrypted before leaving your device</span></li>
+          <li><span class="chk" aria-hidden="true">&#x2713;</span><span>No one at Koda can read your messages or hear your calls</span></li>
+          <li><span class="chk" aria-hidden="true">&#x2713;</span><span>Verify your contacts&rsquo; identity to prevent impersonation</span></li>
+          <li><span class="chk" aria-hidden="true">&#x2713;</span><span>Two-factor authentication with backup codes</span></li>
+          <li><span class="chk" aria-hidden="true">&#x2713;</span><span>No advertising. No behavioural tracking. No data selling.</span></li>
+        </ul>
+
+        <a href="#download" class="btn btn-mint">Start for free &rarr;</a>
+      </div>
+
+      <div class="panels fade" aria-label="Comparison of what other platforms store versus what Koda stores">
+        <div class="panel">
+          <div class="panel-label pl-bad">&#x26A0; What most platforms store</div>
+          <div class="panel-content" style="color:var(--t2)">
+            <div style="color:var(--t1);margin-bottom:6px">ShadowWolf &rarr; #raid-night</div>
+            <div>&ldquo;meet at the boss room in 10, same strat as last time &#x1F43A;&rdquo;</div>
+          </div>
+          <div class="panel-footer">
+            &#x2717; Readable by platform staff, ad systems, and data partners
+          </div>
+        </div>
+
+        <div class="panel" style="border-color:rgba(91,234,212,0.22)">
+          <div class="panel-label pl-good">&#x1F512; What Koda stores</div>
+          <div class="panel-content">
+            <div style="color:var(--t3);margin-bottom:6px">&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619; &rarr; &#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;</div>
+            <div style="color:var(--t3);font-family:var(--mono);font-size:0.72rem;word-break:break-all">
+              [encrypted &mdash; indecipherable without your private key]
+            </div>
+          </div>
+          <div class="panel-footer" style="color:var(--mint)">
+            &#x2713; Unreadable to us, to advertisers, to anyone without your key
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════ VOICE -->
+<section class="s voice-s" id="voice" aria-labelledby="voice-heading">
+  <div class="wrap">
+    <div class="voice-grid">
+      <div class="voice-demo fade" role="img" aria-label="Mock voice channel showing four participants with speaking indicators">
+        <div class="voice-hdr">
+          <div class="voice-live" aria-hidden="true"></div>
+          <div class="voice-title">&#x1F509; Late Night Raid &mdash; 4 connected</div>
+        </div>
+        <div class="participants" role="list">
+          <div class="p-row talking" role="listitem">
+            <div class="p-av" style="background:linear-gradient(135deg,#7B68EE,#5BEAD4)" aria-hidden="true">S</div>
+            <div class="p-info"><div class="p-name">ShadowWolf</div><div class="p-state">Talking</div></div>
+            <div class="p-end" aria-hidden="true"><div class="bars"><span></span><span></span><span></span><span></span><span></span></div></div>
+          </div>
+          <div class="p-row" role="listitem">
+            <div class="p-av" style="background:linear-gradient(135deg,#5B4FCC,#7B68EE)" aria-hidden="true">N</div>
+            <div class="p-info"><div class="p-name">NightRaider</div><div class="p-state">Listening</div></div>
+            <div class="p-end" aria-hidden="true">&#x1F3A7;</div>
+          </div>
+          <div class="p-row" role="listitem">
+            <div class="p-av" style="background:linear-gradient(135deg,#1e7a5a,#5BEAD4)" aria-hidden="true">P</div>
+            <div class="p-info"><div class="p-name">PixelDragon</div><div class="p-state">Muted</div></div>
+            <div class="p-end" aria-hidden="true">&#x1F507;</div>
+          </div>
+          <div class="p-row" role="listitem">
+            <div class="p-av" style="background:linear-gradient(135deg,#7a3d1e,#FF5370)" aria-hidden="true">V</div>
+            <div class="p-info"><div class="p-name">VoidCaster</div><div class="p-state">Listening</div></div>
+            <div class="p-end" aria-hidden="true">&#x1F3A7;</div>
+          </div>
+        </div>
+        <div class="voice-badge" role="status">&#x1F512;&nbsp; Voice is private &mdash; encrypted between participants, not readable by the server</div>
+      </div>
+
+      <div class="voice-text fade">
+        <div class="pill pill-m">Private voice channels</div>
+        <h2 id="voice-heading">Your squad calls stay between your squad.</h2>
+        <p>When you&rsquo;re coordinating a raid, planning a stream, or just hanging out on a Friday night &mdash; that conversation is nobody&rsquo;s business but yours. Koda&rsquo;s voice is private from the ground up.</p>
+        <p>The server routes encrypted audio it can&rsquo;t decode. No one at Koda, no advertiser, no algorithm is listening to your calls and using what you say to target you.</p>
+        <ul class="voice-pts" role="list">
+          <li>Private voice for squads, guilds, and stream communities</li>
+          <li>Video calls and screen sharing built in</li>
+          <li>Noise suppression, echo cancellation, push-to-talk</li>
+          <li>Pop voice out &mdash; talk while browsing other channels</li>
+          <li>No one outside your channel can hear a word</li>
+        </ul>
+        <a href="#download" class="btn btn-primary">Join the Alpha &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════ STATS -->
+<div class="stats-s" aria-label="Key statistics">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat fade"><div class="stat-n">0</div><div class="stat-l">Ads shown<br>to you</div></div>
+      <div class="stat fade"><div class="stat-n">0</div><div class="stat-l">Data sold<br>to advertisers</div></div>
+      <div class="stat fade"><div class="stat-n">5%</div><div class="stat-l">Marketplace fee<br>to your Server Bank</div></div>
+      <div class="stat fade"><div class="stat-n">3</div><div class="stat-l">Desktop platforms<br>at launch</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════ CREATOR -->
+<section class="s creator-s" id="creator" aria-labelledby="creator-heading">
+  <div class="wrap">
+    <div class="creator-grid">
+      <div class="creator-text fade">
+        <div class="pill pill-g">For content creators</div>
+        <h2 id="creator-heading">Your audience. Your income. Your rules.</h2>
+        <p>Build a community that&rsquo;s actually yours &mdash; not rented space on someone else&rsquo;s platform that can deplatform you, algorithm you into irrelevance, or keep 30% of everything you earn.</p>
+        <p>Koda gives you the tools to monetise your community directly: subscription tiers, digital product sales, and subscriber-only channels &mdash; all in the same place your audience already hangs out.</p>
+
+        <div class="bank" role="region" aria-label="Server Bank overview">
+          <div class="bank-hdr">
+            <div class="bank-ico" aria-hidden="true">&#x1F3E6;</div>
+            <div>
+              <div class="bank-name">Server Bank</div>
+              <div class="bank-sub">Earns from your marketplace activity</div>
+            </div>
+          </div>
+          <div class="bank-num">$412.75</div>
+          <div class="bank-lbl">Available credits from sales</div>
+          <div class="bank-uses" role="list">
+            <div class="bank-use" role="listitem">&#x1F680; Unlock server upgrades and features</div>
+            <div class="bank-use" role="listitem">&#x2726; Gift Koda Spark to your subscribers</div>
+            <div class="bank-use" role="listitem">&#x26A1; Gift Koda Pulse to your top supporters</div>
+            <div class="bank-use" role="listitem">&#x1F52E; More options coming as Koda grows</div>
+          </div>
+        </div>
+
+        <div class="fee-row">
+          <div class="fee-num">5%</div>
+          <div>Every marketplace sale adds 5% to your Server Bank &mdash; not to us. Use it to grow your community.</div>
+        </div>
+      </div>
+
+      <div class="creator-cards fade">
+        <div class="pill pill-g" style="margin-bottom:20px">What you can build</div>
+        <div class="c-card">
+          <div class="c-ico fi-g" aria-hidden="true">&#x1F4CB;</div>
+          <div>
+            <h3>Subscription channels</h3>
+            <p>Gate content behind a monthly plan. Your paying subscribers get access; everyone else sees the lock. Full control over who sees what.</p>
+          </div>
+        </div>
+        <div class="c-card">
+          <div class="c-ico fi-g" aria-hidden="true">&#x1F4E6;</div>
+          <div>
+            <h3>Digital product shop</h3>
+            <p>Sell downloads, templates, art packs, sample packs, or any digital file &mdash; directly to your community with pay-what-you-want pricing.</p>
+          </div>
+        </div>
+        <div class="c-card">
+          <div class="c-ico fi-v" aria-hidden="true">&#x1F50D;</div>
+          <div>
+            <h3>Public server discovery</h3>
+            <p>Make your server findable. Browsers see your name, description, and member count &mdash; nothing inside until they join. Your community&rsquo;s content stays private.</p>
+          </div>
+        </div>
+        <div class="c-card">
+          <div class="c-ico fi-m" aria-hidden="true">&#x1F4C5;</div>
+          <div>
+            <h3>Events &amp; RSVP</h3>
+            <p>Schedule stream events, gaming sessions, community calls. Members RSVP and get reminders &mdash; no third-party calendar link needed.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════ COMPARISON -->
+<section class="s why-s" aria-labelledby="compare-heading">
+  <div class="wrap">
+    <div class="s-head fade">
+      <div class="pill pill-v">Koda vs Discord</div>
+      <h2 id="compare-heading">We built Koda for people who wanted better.</h2>
+      <p>An honest comparison &mdash; no marketing spin.</p>
+    </div>
+    <div class="fade">
+      <table class="compare-tbl" role="table" aria-label="Feature comparison between Koda and Discord">
+        <thead>
+          <tr>
+            <th scope="col" style="width:32%">What matters to you</th>
+            <th scope="col" class="koda-col" style="width:34%">Koda</th>
+            <th scope="col" style="width:34%">Discord</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Can the platform read your messages?</td>
+            <td class="koda-col yes">&#x2713; No &mdash; encrypted before leaving your device</td>
+            <td class="no">&#x2717; Yes &mdash; stored in plaintext on their servers</td>
+          </tr>
+          <tr>
+            <td>Can the platform listen to your voice calls?</td>
+            <td class="koda-col yes">&#x2713; No &mdash; voice is encrypted end-to-end</td>
+            <td class="no">&#x2717; Transit encryption only</td>
+          </tr>
+          <tr>
+            <td>Ad targeting based on your activity</td>
+            <td class="koda-col yes">&#x2713; None &mdash; no ads period</td>
+            <td class="no">&#x2717; Behavioural profiling for ad targeting</td>
+          </tr>
+          <tr>
+            <td>Algorithm deciding what your audience sees</td>
+            <td class="koda-col yes">&#x2713; None &mdash; your community, your feed</td>
+            <td class="no">&#x2717; Algorithmic filtering can suppress your content</td>
+          </tr>
+          <tr>
+            <td>Creator marketplace fees</td>
+            <td class="koda-col yes">&#x2713; 5% &rarr; credited back to your Server Bank</td>
+            <td class="no">&#x2717; 10% kept by Discord</td>
+          </tr>
+          <tr>
+            <td>Key verification for contacts</td>
+            <td class="koda-col yes">&#x2713; Safety numbers &mdash; verify who you&rsquo;re talking to</td>
+            <td class="no">&#x2717; No identity verification available</td>
+          </tr>
+          <tr>
+            <td>Server discovery privacy</td>
+            <td class="koda-col yes">&#x2713; Content hidden until membership confirmed</td>
+            <td class="par">Partial &mdash; some content visible before joining</td>
+          </tr>
+          <tr>
+            <td>Servers, channels, roles</td>
+            <td class="koda-col yes">&#x2713; Full-featured, unlimited</td>
+            <td>Full-featured, unlimited</td>
+          </tr>
+          <tr>
+            <td>Parental &amp; community safety controls</td>
+            <td class="koda-col yes">&#x2713; Built-in, server and channel level</td>
+            <td class="par">Limited &mdash; primarily at server level</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════ DOWNLOAD -->
+<section class="s dl-s" id="download" aria-labelledby="download-heading">
+  <div class="wrap">
+    <div class="dl-inner fade">
+      <div class="pill pill-v" style="justify-content:center;margin-bottom:22px">Alpha v0.34 &mdash; Available Now</div>
+      <h2 id="download-heading">Take your community<br><span class="grad">somewhere private.</span></h2>
+      <p>Free to download. No credit card. No ads waiting for you on the other side. Just your community, the way it should be.</p>
+
+      <!-- Desktop downloads — all three available -->
+      <div class="dl-grid" role="list" aria-label="Desktop downloads">
+        <a href="#" class="dl-btn primary" role="listitem" aria-label="Download Koda for Windows">
+          <span class="dl-icon" aria-hidden="true">&#x1F5A5;</span>
+          <div class="dl-info">
+            <span class="dl-lbl">Download for</span>
+            <span class="dl-name">Windows</span>
+          </div>
+        </a>
+        <a href="#" class="dl-btn primary" role="listitem" aria-label="Download Koda for macOS">
+          <span class="dl-icon" aria-hidden="true">&#x1F34E;</span>
+          <div class="dl-info">
+            <span class="dl-lbl">Download for</span>
+            <span class="dl-name">macOS</span>
+          </div>
+        </a>
+        <a href="#" class="dl-btn primary" role="listitem" aria-label="Download Koda for Linux">
+          <span class="dl-icon" aria-hidden="true">&#x1F427;</span>
+          <div class="dl-info">
+            <span class="dl-lbl">Download for</span>
+            <span class="dl-name">Linux</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Mobile — coming soon -->
+      <p style="font-size:0.8rem;color:var(--t3);margin-bottom:14px">Mobile apps in development</p>
+      <div class="mobile-row" role="list" aria-label="Coming soon: Mobile downloads">
+        <div class="dl-btn-mobile" role="listitem" aria-label="iOS — coming soon">&#x1F4F1; iOS <span class="soon">Soon</span></div>
+        <div class="dl-btn-mobile" role="listitem" aria-label="Android — coming soon">&#x1F916; Android <span class="soon">Soon</span></div>
+      </div>
+
+      <p class="dl-note">
+        Koda Alpha v0.34 &middot; Desktop &middot; Built by GryphonHeart LLC &middot;
+        <a href="terms.html">Terms</a> &middot;
+        <a href="privacy.html">Privacy Policy</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════ FOOTER -->
+<footer role="contentinfo">
+  <div class="wrap">
+    <div class="foot-inner">
+      <div class="foot-brand">
+        <a href="/" class="nav-logo" aria-label="Koda home">
+          <div class="nav-mark" aria-hidden="true">K</div>
+          <span class="nav-name">Koda</span>
+        </a>
+        <p>Private communities for gamers, creators, and the people they actually want to talk to. Built by GryphonHeart LLC.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Platform</h4>
+        <ul class="foot-links" role="list">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#privacy">Privacy</a></li>
+          <li><a href="#voice">Voice</a></li>
+          <li><a href="#download">Download</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Community</h4>
+        <ul class="foot-links" role="list">
+          <li><a href="#">Koda HQ Server</a></li>
+          <li><a href="#">Discover servers</a></li>
+          <li><a href="#">Creator resources</a></li>
+          <li><a href="#">Alpha feedback</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <ul class="foot-links" role="list">
+          <li><a href="#">GryphonHeart LLC</a></li>
+          <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="mailto:support@koda.fyi">support@koda.fyi</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>&copy; 2024 GryphonHeart LLC. All rights reserved. Koda Alpha v0.34.</p>
+      <nav class="foot-legal" aria-label="Legal links">
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="mailto:legal@koda.fyi">Legal</a>
+        <a href="mailto:dmca@koda.fyi">DMCA</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/main.js" defer></script>
+</body>
+</html>

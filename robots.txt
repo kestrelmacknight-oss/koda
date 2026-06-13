@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Block access to any config files
+Disallow: /_headers
+Disallow: /_redirects
+
+Sitemap: https://koda.fyi/sitemap.xml
