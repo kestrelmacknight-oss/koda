@@ -1,3 +1,4 @@
+document.getElementById('invite-code').textContent = window.location.pathname;
 const path = window.location.pathname;
 const match = path.match(/\/invite\/([A-Z0-9_-]+)/i);
 const code = match ? match[1].toUpperCase() : null;
