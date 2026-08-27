@@ -274,13 +274,9 @@
 
 <div class="card">
   <div class="logo">
-    <svg class="logo-icon" viewBox="0 0 44 44" fill="none">
-      <circle cx="22" cy="22" r="20" fill="rgba(45,212,160,0.1)" stroke="rgba(45,212,160,0.3)" stroke-width="1"/>
-      <path d="M14 14L22 22L14 30" stroke="#2DD4A0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M22 22L30 14" stroke="#2DD4A0" stroke-width="3" stroke-linecap="round"/>
-      <path d="M22 22L30 30" stroke="#2DD4A0" stroke-width="3" stroke-linecap="round"/>
-    </svg>
-    <span class="logo-text">Koda</span>
+    <center>  
+      <img src="/assets/icons/koda-logo.png" alt="Koda" style="height:256px;object-fit:contain;margin-bottom:1.5rem;">
+      </center>
   </div>
 
   <p class="eyebrow">Server Invite</p>
@@ -332,7 +328,7 @@
 <script>
   // Extract invite code from URL path /invite/XXXXXX
   const path = window.location.pathname;
-  const match = path.match(/\/invite\/([A-Z0-9]+)/i);
+  const match = path.match(/\/invite\/([A-Z0-9_-]+)/i);
   const code = match ? match[1].toUpperCase() : null;
 
   if (code) {
