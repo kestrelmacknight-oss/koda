@@ -1,2 +1,2 @@
 /invite/invite.js  /invite/invite.js  200
-/invite/:code      /invite/index.html  200
+/invite/*          /invite.html       200
