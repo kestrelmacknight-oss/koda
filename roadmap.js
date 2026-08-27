@@ -1,4 +1,3 @@
-<script>
 const PHASES = [
   {
     label:"Phase 0",
@@ -123,4 +122,3 @@ document.addEventListener('click', e => {
   body.classList.toggle('open', !isOpen);
   chev.classList.toggle('open', !isOpen);
 });
-</script>
