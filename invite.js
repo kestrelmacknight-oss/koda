@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
   const path = window.location.pathname;
-  document.getElementById('invite-code').textContent = path; // debug
+  const href = window.location.href;
+  document.getElementById('invite-code').textContent = href; // show full URL
+  // ... rest of code
 
   const match = path.match(/\/invite\/([A-Z0-9_-]+)/i);
   const code = match ? match[1].toUpperCase() : null;
