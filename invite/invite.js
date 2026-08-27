@@ -16,3 +16,5 @@ function copyCode() {
     setTimeout(() => toast.classList.remove('show'), 2500);
   });
 }
+
+document.getElementById('copy-btn').addEventListener('click', copyCode);
