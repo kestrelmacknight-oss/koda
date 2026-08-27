@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>You've been invited to Koda</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --koda: #2DD4A0;
+    --koda-dark: #1a9e76;
+    --koda-glow: rgba(45, 212, 160, 0.15);
+    --bg: #0a0a0a;
+    --bg2: #111111;
+    --card: #161616;
+    --border: rgba(45, 212, 160, 0.2);
+    --text1: #f0f0f0;
+    --text2: #888888;
+    --text3: #555555;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text1);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+  }
+
+  /* Subtle grid background */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(45, 212, 160, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(45, 212, 160, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 3rem 2.5rem;
+    max-width: 480px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Top glow */
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 200px; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--koda), transparent);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 2.5rem;
+    justify-content: center;
+  }
+
+  .logo-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .logo-text {
+    font-size: 1.6rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #2DD4A0, #5ef5c8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.5px;
+  }
+
+  .eyebrow {
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--koda);
+    margin-bottom: 0.75rem;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text1);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.3px;
+  }
+
+  .subtitle {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text2);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  .code-block {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .code-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text3);
+    margin-bottom: 4px;
+  }
+
+  .code-value {
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--koda);
+    letter-spacing: 0.15em;
+  }
+
+  .copy-btn {
+    background: rgba(45, 212, 160, 0.1);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.5rem 0.75rem;
+    color: var(--koda);
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s;
+    font-family: inherit;
+  }
+
+  .copy-btn:hover { background: rgba(45, 212, 160, 0.2); }
+
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .step {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .step-num {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: rgba(45, 212, 160, 0.1);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--koda);
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .step-text {
+    font-size: 0.875rem;
+    color: var(--text2);
+    line-height: 1.5;
+  }
+
+  .step-text strong { color: var(--text1); font-weight: 500; }
+
+  .btn-primary {
+    display: block;
+    width: 100%;
+    background: var(--koda);
+    color: #0a0a0a;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 0.875rem;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.1s;
+    margin-bottom: 0.75rem;
+  }
+
+  .btn-primary:hover { background: #5ef5c8; }
+  .btn-primary:active { transform: scale(0.99); }
+
+  .btn-secondary {
+    display: block;
+    width: 100%;
+    background: transparent;
+    color: var(--text2);
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.75rem;
+    border-radius: 12px;
+    border: 1px solid var(--text3);
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .btn-secondary:hover { border-color: var(--text2); color: var(--text1); }
+
+  .privacy-note {
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--text3);
+    margin-top: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .privacy-note span { color: var(--koda); }
+
+  .toast {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.875rem;
+    color: var(--koda);
+    opacity: 0;
+    transition: opacity 0.2s, transform 0.2s;
+    pointer-events: none;
+  }
+
+  .toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="logo">
+    <svg class="logo-icon" viewBox="0 0 44 44" fill="none">
+      <circle cx="22" cy="22" r="20" fill="rgba(45,212,160,0.1)" stroke="rgba(45,212,160,0.3)" stroke-width="1"/>
+      <path d="M14 14L22 22L14 30" stroke="#2DD4A0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M22 22L30 14" stroke="#2DD4A0" stroke-width="3" stroke-linecap="round"/>
+      <path d="M22 22L30 30" stroke="#2DD4A0" stroke-width="3" stroke-linecap="round"/>
+    </svg>
+    <span class="logo-text">Koda</span>
+  </div>
+
+  <p class="eyebrow">Server Invite</p>
+  <h1 id="invite-heading">You've been invited</h1>
+  <p class="subtitle" id="invite-subtitle">
+    Join a private server on Koda — the encrypted, privacy-first alternative to Discord.
+  </p>
+
+  <div class="code-block">
+    <div>
+      <div class="code-label">Your invite code</div>
+      <div class="code-value" id="invite-code">Loading...</div>
+    </div>
+    <button class="copy-btn" onclick="copyCode()">Copy</button>
+  </div>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-text">
+        <strong>Download Koda</strong> for Windows, macOS, or Linux using the button below
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-text">
+        Create your account — no phone number or real name required
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-text">
+        Click <strong>+</strong> in the sidebar, choose <strong>Join Server</strong>, and paste your code
+      </div>
+    </div>
+  </div>
+
+  <a href="https://koda.fyi/download" class="btn-primary">Download Koda</a>
+  <a href="https://koda.fyi" class="btn-secondary">Learn more about Koda</a>
+
+  <p class="privacy-note">
+    <span>End-to-end encrypted.</span> Koda never reads your messages.<br>
+    No ads. No tracking. No compromise.
+  </p>
+</div>
+
+<div class="toast" id="toast">Code copied to clipboard</div>
+
+<script>
+  // Extract invite code from URL path /invite/XXXXXX
+  const path = window.location.pathname;
+  const match = path.match(/\/invite\/([A-Z0-9]+)/i);
+  const code = match ? match[1].toUpperCase() : null;
+
+  if (code) {
+    document.getElementById('invite-code').textContent = code;
+  } else {
+    document.getElementById('invite-code').textContent = 'INVALID';
+    document.getElementById('invite-heading').textContent = 'Invalid invite link';
+    document.getElementById('invite-subtitle').textContent =
+      'This invite link appears to be malformed. Ask your friend for a new one.';
+  }
+
+  function copyCode() {
+    const code = document.getElementById('invite-code').textContent;
+    navigator.clipboard.writeText(code).then(() => {
+      const toast = document.getElementById('toast');
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2500);
+    });
+  }
+</script>
+
+</body>
+</html>
