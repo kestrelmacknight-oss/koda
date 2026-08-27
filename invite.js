@@ -1,16 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const path = window.location.pathname;
-  const href = window.location.href;
-  document.getElementById('invite-code').textContent = href; // show full URL
-  // ... rest of code
-
-  const match = path.match(/\/invite\/([A-Z0-9_-]+)/i);
-  const code = match ? match[1].toUpperCase() : null;
-
-  if (code) {
+  const code = window.location.hash.replace('#', '').toUpperCase().trim();
+  
+  if (code && code.length > 0) {
     document.getElementById('invite-code').textContent = code;
   } else {
-    document.getElementById('invite-code').textContent = 'NO MATCH: ' + path;
+    document.getElementById('invite-code').textContent = 'INVALID';
   }
 
   function copyCode() {
