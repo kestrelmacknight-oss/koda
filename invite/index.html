@@ -326,7 +326,6 @@
 <div class="toast" id="toast">Code copied to clipboard</div>
 
 <script>
-  // Extract invite code from URL path /invite/XXXXXX
   const path = window.location.pathname;
   const match = path.match(/\/invite\/([A-Z0-9_-]+)/i);
   const code = match ? match[1].toUpperCase() : null;
@@ -335,7 +334,7 @@
     document.getElementById('invite-code').textContent = code;
   } else {
     document.getElementById('invite-code').textContent = 'INVALID';
-    document.getElementById('invite-heading').textContent = 'Invalid invite link';
+  }
     document.getElementById('invite-subtitle').textContent =
       'This invite link appears to be malformed. Ask your friend for a new one.';
   }
