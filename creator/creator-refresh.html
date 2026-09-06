@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Continue Setup — Koda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0d0e1a;
+      color: #e2e4f0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .card {
+      background: #161728;
+      border: 1px solid #1e2035;
+      border-radius: 16px;
+      padding: 48px 40px;
+      max-width: 440px;
+      width: 100%;
+      text-align: center;
+    }
+    .icon {
+      width: 64px;
+      height: 64px;
+      background: rgba(245,158,11,0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+    }
+    .icon svg { width: 32px; height: 32px; }
+    h1 { font-size: 24px; font-weight: 800; color: #f0f1f8; margin-bottom: 12px; }
+    p { font-size: 15px; color: #9ba5c8; line-height: 1.6; margin-bottom: 32px; }
+    .btn {
+      display: inline-block;
+      background: #2DD4A0;
+      color: #000;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 14px 32px;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+    .note { margin-top: 20px; font-size: 12px; color: #4b5563; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5"
+           stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <line x1="12" y1="8" x2="12" y2="12"/>
+        <line x1="12" y1="16" x2="12.01" y2="16"/>
+      </svg>
+    </div>
+    <h1>Setup Incomplete</h1>
+    <p>Your Stripe onboarding link has expired. Return to Koda and click "Complete Stripe Onboarding" to get a new link.</p>
+    <a href="koda://marketplace/creator" class="btn">Return to Koda</a>
+    <p class="note">If the button doesn't work, close this tab and reopen the app.</p>
+  </div>
+</body>
+</html>
