@@ -29,7 +29,7 @@ const PHASES = [
     label:"Phase 2",
     title:"Platform hardening",
     accent:"#7F77DD",
-    badge:"Next priority", badgeClass:"badge-next",
+    badge:"Complete", badgeClass:"badge-next",
     desc:"Deepen the Alpha foundation with mobile apps, message features users expect from day-to-day use, and the monetization layer that makes Koda sustainable.",
     sections:[
       {title:"Mobile",color:"#7F77DD",items:["iOS app (Flutter)","Android app (Flutter)","Push notifications (APNs + FCM)","Deep links (koda://invite/XXX)","Background message sync"]},
@@ -43,7 +43,7 @@ const PHASES = [
     label:"Phase 3",
     title:"Intelligence layer",
     accent:"#185FA5",
-    badge:"Planned", badgeClass:"badge-planned",
+    badge:"Under Development", badgeClass:"badge-planned",
     desc:"Add intelligence to moderation, server setup, and accessibility &mdash; all operating within the zero-knowledge constraint. No plaintext ever reaches a model unless the user explicitly opts in.",
     sections:[
       {title:"Visp AI assistant",color:"#185FA5",items:["Natural language server setup","Smart walkthrough branching","Event creation from natural language","Boost ROI advisor","Visp character animation"]},
