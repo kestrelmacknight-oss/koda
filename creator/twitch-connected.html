@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Twitch Connected — Koda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0d0e1a;
+      color: #e2e4f0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .card {
+      background: #161728;
+      border: 1px solid #1e2035;
+      border-radius: 16px;
+      padding: 48px 40px;
+      max-width: 440px;
+      width: 100%;
+      text-align: center;
+    }
+    .icons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .icon-circle {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .icon-koda { background: rgba(45,212,160,0.15); }
+    .icon-twitch { background: rgba(145,70,255,0.15); }
+    .connector {
+      width: 32px;
+      height: 2px;
+      background: linear-gradient(90deg, #2DD4A0, #9146FF);
+      border-radius: 2px;
+    }
+    .check-badge {
+      position: relative;
+      margin: 0 auto 24px;
+      width: 64px;
+      height: 64px;
+    }
+    .check-badge .circle {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: rgba(45,212,160,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    h1 {
+      font-size: 22px;
+      font-weight: 800;
+      color: #f0f1f8;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 14px;
+      color: #9ba5c8;
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+    .btn {
+      display: inline-block;
+      background: #2DD4A0;
+      color: #000;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 12px 28px;
+      border-radius: 10px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.15s;
+    }
+    .btn:hover { opacity: 0.85; }
+    .note {
+      margin-top: 16px;
+      font-size: 11px;
+      color: #4b5563;
+    }
+    .twitch-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(145,70,255,0.12);
+      border: 1px solid rgba(145,70,255,0.25);
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: 12px;
+      color: #b97aff;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .twitch-dot {
+      width: 6px;
+      height: 6px;
+      background: #9146FF;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <!-- Koda + Twitch icons -->
+    <div class="icons">
+      <div class="icon-circle icon-koda">
+        <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+          <circle cx="16" cy="16" r="16" fill="rgba(45,212,160,0.2)"/>
+          <text x="16" y="21" font-size="16" text-anchor="middle" fill="#2DD4A0" font-family="sans-serif" font-weight="bold">K</text>
+        </svg>
+      </div>
+      <div class="connector"></div>
+      <div class="icon-circle icon-twitch">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="#9146FF">
+          <path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Check -->
+    <div class="check-badge">
+      <div class="circle">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+             stroke="#2DD4A0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 6L9 17l-5-5"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="twitch-tag">
+      <div class="twitch-dot"></div>
+      Twitch Connected
+    </div>
+
+    <h1>You're all set!</h1>
+    <p>Your Twitch account has been linked to Koda. Close this window and return to the app to continue.</p>
+
+    <button class="btn" onclick="window.close()">Close Window</button>
+    <p class="note">If this window doesn't close automatically, you can close it manually and return to Koda.</p>
+  </div>
+</body>
+</html>
