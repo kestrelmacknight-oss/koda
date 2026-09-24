@@ -42,16 +42,19 @@
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      background: rgba(45,212,160,0.1);
     }
-    .icon-circle img {
-      width: 36px;
-      height: 36px;
+    .icon-koda {
+      background: rgba(45,212,160,0.12);
+    }
+    .icon-koda img {
+      width: 34px;
+      height: 34px;
       object-fit: contain;
     }
     .icon-printful {
       background: rgba(255,255,255,0.06);
-      font-size: 22px;
+      border: 1px solid rgba(255,255,255,0.1);
+      font-size: 18px;
       font-weight: 800;
       color: #fff;
       letter-spacing: -1px;
@@ -59,7 +62,7 @@
     .connector {
       width: 32px;
       height: 2px;
-      background: linear-gradient(90deg, #2DD4A0, #ffffff44);
+      background: linear-gradient(90deg, #2DD4A0, rgba(255,255,255,0.3));
       border-radius: 2px;
     }
     .check-wrap {
@@ -119,9 +122,6 @@
       color: #c4c9e0;
       padding: 5px 0;
     }
-    .perk svg {
-      flex-shrink: 0;
-    }
     .btn {
       display: inline-block;
       background: #2DD4A0;
@@ -133,7 +133,6 @@
       border: none;
       cursor: pointer;
       transition: opacity 0.15s;
-      text-decoration: none;
     }
     .btn:hover { opacity: 0.85; }
     .note {
@@ -145,16 +144,15 @@
 </head>
 <body>
   <div class="card">
-    <!-- Koda logo + Printful -->
     <div class="icons">
-      <div class="icon-circle">
-        <img src="/koda-logo.png" alt="Koda" onerror="this.style.display='none';this.parentNode.innerHTML='<span style=\'color:#2DD4A0;font-weight:800;font-size:20px\'>K</span>'">
+      <div class="icon-circle icon-koda">
+        <img src="/assets/icons/koda-icon.png" alt="Koda"
+             onerror="this.style.display='none';this.parentNode.innerHTML='<span style=\'color:#2DD4A0;font-weight:800;font-size:22px\'>K</span>'">
       </div>
       <div class="connector"></div>
       <div class="icon-circle icon-printful">Pf</div>
     </div>
 
-    <!-- Check -->
     <div class="check-wrap">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
            stroke="#2DD4A0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
