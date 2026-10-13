@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#09090F">
+  <title>Open in Koda</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.png">
+  <link rel="alternate icon"            href="/assets/icons/favicon1.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    /* Scoped to this page only -- see style.css's own header comment. */
+    .oauth-wrap { min-height: 70vh; display: flex; align-items: center; justify-content: center; padding: 40px 20px; }
+    .oauth-card { max-width: 420px; text-align: center; }
+    .oauth-spinner {
+      width: 36px; height: 36px; margin: 0 auto 24px;
+      border: 3px solid var(--border2); border-top-color: var(--violet);
+      border-radius: 50%; animation: oauth-spin 0.8s linear infinite;
+    }
+    @keyframes oauth-spin { to { transform: rotate(360deg); } }
+    .oauth-card h1 { font-size: 22px; margin-bottom: 8px; }
+    .oauth-card p { color: var(--t2); font-size: 14px; margin-bottom: 24px; }
+    [hidden] { display: none !important; }
+  </style>
+</head>
+<body>
+
+<nav class="nav scrolled" id="kp-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo" aria-label="Koda home">
+      <div class="nav-mark" aria-hidden="true">K</div>
+      <span class="nav-name">Koda</span>
+    </a>
+  </div>
+</nav>
+
+<main class="oauth-wrap" id="main-content">
+  <div class="oauth-card">
+    <div id="oauth-waiting">
+      <div class="oauth-spinner" aria-hidden="true"></div>
+      <h1>Opening Koda&hellip;</h1>
+      <p>This app needs your permission inside Koda. If nothing happens in a few seconds, you probably don&rsquo;t have it installed yet.</p>
+    </div>
+    <div id="oauth-fallback" hidden>
+      <h1>Install Koda to continue</h1>
+      <p>This link authorizes a third-party app with your Koda account. You&rsquo;ll need the Koda app installed first.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a href="/#download" class="btn btn-primary">Download Koda</a>
+        <a href="#" id="oauth-retry" class="btn btn-ghost">Try opening the app again</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="/js/oauth-authorize.js" defer></script>
+</body>
+</html>
