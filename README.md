@@ -76,13 +76,13 @@ Search the HTML files for `[INSERT` and fill in every placeholder:
 **Download links** — search `href="#"` in `index.html` and replace with your actual installer URLs:
 ```html
 <!-- Windows -->
-<a href="https://releases.koda.fyi/KodaSetup-v0.5.0-Windows.exe" ...>
+<a href="https://releases.koda.fyi/KodaSetup-v0.7.0-Windows.exe" ...>
 
 <!-- macOS -->
-<a href="https://releases.koda.fyi/KodaBeta-v0.5.0-macOS.dmg" ...>
+<a href="https://releases.koda.fyi/KodaBeta-v0.7.0-macOS.dmg" ...>
 
 <!-- Linux -->
-<a href="https://releases.koda.fyi/KodaBeta-v0.5.0-Linux-x86_64.AppImage" ...>
+<a href="https://releases.koda.fyi/KodaBeta-v0.7.0-Linux-x86_64.AppImage" ...>
 ```
 
 **OG image** — add a 1200×630 PNG to `assets/og-image.png` and the meta tags in `index.html` will reference it. A dark-theme image with the Koda logo and the headline works well.
