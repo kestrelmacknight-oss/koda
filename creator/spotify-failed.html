@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Connection Failed — Koda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0d0e1a;
+      color: #e2e4f0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .card {
+      background: #161728;
+      border: 1px solid #1e2035;
+      border-radius: 16px;
+      padding: 48px 40px;
+      max-width: 440px;
+      width: 100%;
+      text-align: center;
+    }
+    .icons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .icon-circle {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .icon-koda {
+      background: rgba(45,212,160,0.12);
+    }
+    .icon-koda img {
+      width: 34px;
+      height: 34px;
+      object-fit: contain;
+    }
+    .icon-spotify {
+      background: rgba(30,215,96,0.15);
+    }
+    .connector {
+      width: 32px;
+      height: 2px;
+      background: linear-gradient(90deg, #ef4444, #1ED760);
+      border-radius: 2px;
+    }
+    .x-wrap {
+      margin: 0 auto 20px;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: rgba(239,68,68,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(239,68,68,0.12);
+      border: 1px solid rgba(239,68,68,0.3);
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: 12px;
+      color: #f87171;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .tag-dot {
+      width: 6px;
+      height: 6px;
+      background: #ef4444;
+      border-radius: 50%;
+    }
+    h1 {
+      font-size: 22px;
+      font-weight: 800;
+      color: #f0f1f8;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 14px;
+      color: #9ba5c8;
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+    .btn {
+      display: inline-block;
+      background: #2DD4A0;
+      color: #000;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 12px 28px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.15s;
+    }
+    .btn:hover { opacity: 0.85; }
+    .note {
+      margin-top: 16px;
+      font-size: 11px;
+      color: #4b5563;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="icons">
+      <div class="icon-circle icon-koda">
+        <img src="/assets/icons/koda-icon.png" alt="Koda"
+             onerror="this.style.display='none';this.parentNode.innerHTML='<span style=\'color:#2DD4A0;font-weight:800;font-size:22px\'>K</span>'">
+      </div>
+      <div class="connector"></div>
+      <div class="icon-circle icon-spotify">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="#1ED760">
+          <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141 4.32-1.32 9.719-.66 13.439 1.621.361.181.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="x-wrap">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none"
+           stroke="#ef4444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </div>
+
+    <div class="tag">
+      <div class="tag-dot"></div>
+      Connection Failed
+    </div>
+
+    <h1>Couldn't connect Spotify</h1>
+    <p>Something went wrong linking your Spotify account. This is usually temporary — close this window and try again from Koda's connection settings.</p>
+
+    <button class="btn" onclick="window.close()">Close and Try Again</button>
+    <p class="note">If this keeps happening, reach out through Koda's support so we can take a look.</p>
+  </div>
+</body>
+</html>

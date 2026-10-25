@@ -56,13 +56,13 @@ const PHASES = [
     label:"Phase 4",
     title:"Platform expansion",
     accent:"#993C1D",
-    badge:"Planned", badgeClass:"badge-planned",
+    badge:"In Progress", badgeClass:"badge-next",
     desc:"Open Koda to third-party developers and expand the product surface to cover every major use case that keeps communities on competitor platforms.",
     sections:[
-      {title:"Developer platform",color:"#993C1D",items:["Public REST + WebSocket API","Webhook system","Bot SDK (koda-ex library)","OAuth2 app authorization","Developer portal + API key management","Sandbox environment","Slash command framework"]},
-      {title:"Live integrations",color:"#993C1D",items:["Twitch live alerts","YouTube premiere alerts","Spotify listening party","Steam game activity","Google Calendar two-way sync","Kick.com stream alerts"]},
-      {title:"Community surfaces",color:"#993C1D",items:["Server discovery (public listing)","Featured servers","Server templates library","Activity feed (cross-server friends)","Cross-server events","Koda Arcade (embedded mini-games)","Server leaderboards + achievements"]},
-      {title:"Enterprise",color:"#993C1D",items:["Self-hosted deployment","SAML/SSO login","Custom domain support","Data residency region selection","SLA + uptime guarantee","Audit log export (SIEM-compatible)"]},
+      {title:"Developer platform",color:"#993C1D",items:["Public REST + WebSocket API",{t:"Webhook system",done:true},{t:"Bot SDK (koda-ex library)",done:true},{t:"OAuth2 app authorization",done:true},{t:"Developer portal + API key management",done:true},{t:"Sandbox environment",done:true},{t:"Slash command framework",done:true}]},
+      {title:"Live integrations",color:"#993C1D",items:[{t:"Twitch live alerts",done:true},{t:"YouTube premiere alerts",done:true},{t:"Spotify listening party",done:true},{t:"Steam game activity",done:true},{t:"Google Calendar two-way sync",done:true},{t:"Kick.com stream alerts",done:true}]},
+      {title:"Community surfaces",color:"#993C1D",items:[{t:"Server discovery (public listing)",done:true},{t:"Featured servers",done:true},{t:"Server templates library",done:true},{t:"Activity feed (cross-server friends)",done:true},{t:"Cross-server events",done:true},{t:"Koda Arcade (embedded mini-games)",done:true},{t:"Server leaderboards + achievements",done:true}]},
+      {title:"Enterprise",color:"#993C1D",items:["Self-hosted deployment",{t:"SAML/SSO login",done:true},"Custom domain support","Data residency region selection","SLA + uptime guarantee",{t:"Audit log export (SIEM-compatible)",done:true}]},
     ]
   },
   {
@@ -101,7 +101,14 @@ function makePhase(p, idx) {
     <div class="feat-section">
       <div class="feat-section-title">${s.title}</div>
       <div class="chips">
-        ${s.items.map(item => `<span class="chip"><span class="chip-dot" style="background:${s.color}"></span>${item}</span>`).join('')}
+        ${s.items.map(item => {
+          const done = typeof item === 'object';
+          const text = done ? item.t : item;
+          const mark = done
+            ? `<svg class="chip-check" viewBox="0 0 24 24" fill="none" stroke="#2DD4A0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>`
+            : `<span class="chip-dot" style="background:${s.color}"></span>`;
+          return `<span class="chip${done ? ' chip-done' : ''}">${mark}${text}</span>`;
+        }).join('')}
       </div>
     </div>
   `).join('')}
